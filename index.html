@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="stylesheets/all.css">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="container-sm pt-5">
+            <h1 class="text-center display-5 fw-bold mb-4">TODO LIST</h1>
+            <div class="addJob input-group input-group-lg rounded bg-light mb-4">
+                <a class="save btn btn-outline-secondary border-0" href="#"><i class="fas fa-plus"></i></a>
+                <input type="text" class="newJob form-control bg-transparent border-0 ps-2" placeholder=""
+                    aria-label="Example text with button addon" aria-describedby="button-addon1">
+            </div>
+            <div class="filter btn-group btn-group-lg rounded bg-light w-100" role="group"
+                aria-label="Basic checkbox toggle button group">
+                <input type="radio" class="btn-check active" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-secondary border-0" for="btnradio1">全部</label>
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-secondary border-top-0 border-bottom-0" for="btnradio2">待完成</label>
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                <label class="btn btn-outline-secondary border-0" for="btnradio3">已完成</label>
+            </div>
+            <ul class="list ps-0 w-100">
+            </ul>
+            <ul class="listStatus ps-0 w-100">
+                <li class="rounded bg-light shadow-sm px-3 py-3 d-flex">
+                    <span class="unDoneNum">0 個待完成項目</span>
+                    <a class="deleteDone ms-auto" href="#">清除已完成項目</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>

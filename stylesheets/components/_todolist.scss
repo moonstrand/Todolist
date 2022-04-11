@@ -1,0 +1,106 @@
+.btn:focus{
+    box-shadow:none!important;
+}
+
+.bg {
+    background: url(https://images.unsplash.com/photo-1638176820495-52a7c2ad8505?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1539&q=80);
+    background-size: cover;
+    background-position: center center;
+    height: 1080px !important;
+}
+
+.addJob, .statusMenu {
+    --bs-bg-opacity: 0.7 !important;
+}
+
+li {
+    list-style: none !important;
+    --bs-bg-opacity: 0.85 !important;
+    cursor: pointer;
+}
+
+li:hover {
+    --bs-bg-opacity: 1 !important;
+}
+
+a.delete {
+    opacity: 0;
+}
+
+li:hover a.delete {
+    opacity: 1;
+}
+
+.checkbox {
+    position: relative;
+    user-select: none;
+    width: 100%;
+    display: block;
+    padding-left: 44px;
+    cursor: pointer;
+}
+
+.checkbox input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.checkbox span::before {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    top: 51%;
+    transform: translateY(-50%) scale(1);
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.checkbox span::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 18%;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 0.5rem;
+    border-radius: 1px;
+    border-bottom: 3px solid #6c757d;
+    border-right: 3px solid #6c757d;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.checkbox input:checked ~ span {
+    color: #9f9a91;
+    text-decoration: line-through;
+}
+
+.checkbox input:checked ~ span::before {
+    border-color: transparent;
+    transform: translateY(-50%) scale(0);
+}
+
+.checkbox input:checked ~ span::after {
+    opacity: 1;
+}
+
+.deleteJob:hover, .deleteDone:hover {
+    color: red !important;
+}
+
+.deleteDone {
+    text-decoration: none;
+    color: $dark;
+}
